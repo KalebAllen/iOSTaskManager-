@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="TaskManager" id="lOl-bI-y2U">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="aIb-Pp-JcL">
                             <connections>
-                                <action selector="AddTask:" destination="LaW-PD-FiB" id="Wte-Qx-sqe"/>
+                                <action selector="AddTaskButton:" destination="LaW-PD-FiB" id="FXF-9H-DPp"/>
                                 <segue destination="ezq-6f-mum" kind="show" id="gsj-i3-ujr"/>
                             </connections>
                         </barButtonItem>

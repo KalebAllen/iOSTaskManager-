@@ -9,8 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBAction func AddTask(_ sender: Any) {
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

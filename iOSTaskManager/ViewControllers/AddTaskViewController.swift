@@ -13,21 +13,24 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var DiscriptionTextFeild: UITextField!
     @IBOutlet weak var SubmitButtion: UIButton!
     
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    // Do any additional setup after loading the view.
+    /*
+     // MARK: - Navigation
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    @IBAction func AddTaskButton(_ sender: Any) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        
+    
+    
+    
+    
 }
