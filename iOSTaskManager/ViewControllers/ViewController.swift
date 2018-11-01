@@ -9,13 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var TaskTittle: UILabel!
+    @IBOutlet weak var DueDateLabel: UILabel!
+    @IBOutlet weak var CheckedStatus: UILabel!
+    var currentTask = Task?.self
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(animated)
+    //        tableView.reloadData()
+    //    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
-
-
+    // Configure the view for the selected state
 }
+
+
+
 

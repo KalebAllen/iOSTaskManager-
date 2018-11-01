@@ -12,7 +12,7 @@
         <!--TaskManager-->
         <scene sceneID="KWY-ih-O7B">
             <objects>
-                <tableViewController title="TaskManager" id="O0X-OD-tZo" sceneMemberID="viewController">
+                <tableViewController title="TaskManager" id="O0X-OD-tZo" customClass="ViewTask" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TGM-pY-7is">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,7 @@
         <!--ViewTask-->
         <scene sceneID="UIV-7A-Hp1">
             <objects>
-                <viewControllerPlaceholder storyboardName="ViewTask" id="1GK-gO-OQh" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="ViewTask" storyboardName="ViewTask" id="1GK-gO-OQh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="72U-9W-2fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="618" y="299"/>
