@@ -15,6 +15,7 @@ class AddTaskViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
     }
     // Do any additional setup after loading the view.
     /*
@@ -27,10 +28,6 @@ class AddTaskViewController: UIViewController {
      */
     @IBAction func AddTaskButton(_ sender: Any) {
     }
-    
-        
-    
-    
     
     
 }

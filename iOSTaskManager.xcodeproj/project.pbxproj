@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B082763218B48860090FA18 /* ViewTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B082762218B48860090FA18 /* ViewTaskTableViewCell.swift */; };
 		0B5217DA2188AB2500B6D249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5217D92188AB2500B6D249 /* AppDelegate.swift */; };
 		0B5217DC2188AB2500B6D249 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5217DB2188AB2500B6D249 /* ViewController.swift */; };
 		0B5217DF2188AB2500B6D249 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5217DD2188AB2500B6D249 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B082762218B48860090FA18 /* ViewTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTaskTableViewCell.swift; sourceTree = "<group>"; };
 		0B5217D62188AB2500B6D249 /* iOSTaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5217D92188AB2500B6D249 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B5217DB2188AB2500B6D249 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				0B5217DB2188AB2500B6D249 /* ViewController.swift */,
 				0B5217F62188E00C00B6D249 /* AddTaskViewController.swift */,
+				0B082762218B48860090FA18 /* ViewTaskTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				0B5217DC2188AB2500B6D249 /* ViewController.swift in Sources */,
 				0B5217F72188E00C00B6D249 /* AddTaskViewController.swift in Sources */,
 				0B5217DA2188AB2500B6D249 /* AppDelegate.swift in Sources */,
+				0B082763218B48860090FA18 /* ViewTaskTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
