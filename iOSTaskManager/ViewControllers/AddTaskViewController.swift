@@ -14,9 +14,34 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var SubmitButtion: UIButton!
     
     
+    
+    //    var currentTask: Task!
+    
     override func viewDidLoad() {
         
     }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if let destination = segue.destination as?
+    //            AddTaskViewController {
+    //            destination.taskToView = currentTask
+    //        }
+    //    }
+    func addTask() {
+        self.TitleTaskTextFeild.text = ""
+        self.DiscriptionTextFeild.text = ""
+    }
+    func showErrorAlert() {
+        let alertController = UIAlertController(title: "ERROR", message: "Looks like you missed something", preferredStyle: .actionSheet)
+        let closeAction = UIAlertAction(title: "Close", style: .default) {
+            _ in
+            self.TitleTaskTextFeild.text = ""
+            self.DiscriptionTextFeild.text = ""
+        }
+        alertController.addAction(closeAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
     // Do any additional setup after loading the view.
     /*
      // MARK: - Navigation
@@ -26,8 +51,8 @@ class AddTaskViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    @IBAction func AddTaskButton(_ sender: Any) {
+    @IBAction func AddTaskButtonTapped(_ sender: Any) {
     }
-    
+    //    guard let task =
     
 }

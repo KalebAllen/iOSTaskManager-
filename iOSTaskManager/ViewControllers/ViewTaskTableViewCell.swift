@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewTaskTableViewCell: UITableViewCell {
+    @IBOutlet weak var TaskTittle: UILabel!
+    @IBOutlet weak var DueDateLabel: UILabel!
+    @IBOutlet weak var CheckedStatus: UILabel!
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

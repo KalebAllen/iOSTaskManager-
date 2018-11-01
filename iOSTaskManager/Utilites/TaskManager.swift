@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+class Task {
+    var tittle: String
+    var checkedIn = true
+    
+    init (tittle:String) {
+        self.tittle = tittle
+    }
+}
+
+class Libary {
+    private var TaskArry: [Task] = [Task(tittle: "🐲")]
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
