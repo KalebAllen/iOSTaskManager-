@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
+import UserNotifications
 
 class AddTaskViewController: UIViewController {
     @IBOutlet weak var TitleTaskTextFeild: UITextField!
     @IBOutlet weak var DiscriptionTextFeild: UITextField!
     @IBOutlet weak var SubmitButtion: UIButton!
     
+    private init(){
+        Task = realm.objects(task.self)
+        super.init(coder: Int)
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //    var currentTask: Task!
     
@@ -26,10 +35,11 @@ class AddTaskViewController: UIViewController {
     //            destination.taskToView = currentTask
     //        }
     //    }
-    func addTask() {
+    func addTask(task: Task) {
         self.TitleTaskTextFeild.text = ""
         self.DiscriptionTextFeild.text = ""
     }
+    
     func showErrorAlert() {
         let alertController = UIAlertController(title: "ERROR", message: "Looks like you missed something", preferredStyle: .actionSheet)
         let closeAction = UIAlertAction(title: "Close", style: .default) {
@@ -42,6 +52,22 @@ class AddTaskViewController: UIViewController {
     }
     
     
+    private var Task: Results<task>!
+    
+    let realm = try! Realm()
+    
+    func getTaskCount() -> Int {
+        return Task.count
+    }
+    func getTask(at index: Int) -> task {
+        return Task![index]
+    }
+    
+    func removeTask(at index: Int) {
+        try! realm.write {
+            realm.delete(getTask(at:index))
+        }
+    }
     // Do any additional setup after loading the view.
     /*
      // MARK: - Navigation
