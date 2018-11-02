@@ -52,7 +52,12 @@ class AddTaskViewController: UIViewController {
      }
      */
     @IBAction func AddTaskButtonTapped(_ sender: Any) {
+        guard let title = DiscriptionTextFeild.text, title.trimmingCharacters(in: .whitespaces) != "",
+            let DiscriptionTextFeild = DiscriptionTextFeild.text,
+            DiscriptionTextFeild.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+                return
+        }
     }
-    //    guard let task =
+    
     
 }

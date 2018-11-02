@@ -12,7 +12,7 @@
         <!--TaskManager-->
         <scene sceneID="KWY-ih-O7B">
             <objects>
-                <tableViewController title="TaskManager" id="O0X-OD-tZo" customClass="ViewTask" sceneMemberID="viewController">
+                <tableViewController title="TaskManager" id="O0X-OD-tZo" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TGM-pY-7is">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,8 +56,12 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="CheckedStatus" destination="Q0Q-4V-zuk" id="ctt-oF-o6W"/>
+                                    <outlet property="DueDate" destination="uJJ-aH-c7W" id="UHh-0E-bR5"/>
                                     <outlet property="DueDateLabel" destination="uJJ-aH-c7W" id="Rii-3P-6nP"/>
+                                    <outlet property="InOutLable" destination="Q0Q-4V-zuk" id="fCp-5T-tfu"/>
                                     <outlet property="TaskTittle" destination="Lvn-qf-JIo" id="O8m-2o-eJO"/>
+                                    <outlet property="TitleLabel" destination="Lvn-qf-JIo" id="c48-Cq-reu"/>
+                                    <outlet property="taskTitleLabel" destination="Lvn-qf-JIo" id="ifq-xX-uzn"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Aei-t1-0yD">

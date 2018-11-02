@@ -9,9 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var TaskTittle: UILabel!
-    @IBOutlet weak var DueDateLabel: UILabel!
-    @IBOutlet weak var CheckedStatus: UILabel!
+    
     var currentTask = Task?.self
     
     //    override func viewWillAppear(_ animated: Bool) {

@@ -15,13 +15,12 @@ class Task {
     init (tittle:String) {
         self.tittle = tittle
     }
+//    private var TaskArray: Results<Task>!
+    class Libary {
+        private var TaskArray: [Task] = [Task(tittle: "🐲")]
+        
+    }
 }
-
-class Libary {
-    private var TaskArry: [Task] = [Task(tittle: "🐲")]
-    
-}
-
 
 
 

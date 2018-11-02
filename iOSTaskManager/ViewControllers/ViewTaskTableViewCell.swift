@@ -9,5 +9,15 @@
 import UIKit
 
 class ViewTaskTableViewCell: UITableViewCell {
+    @IBOutlet weak var InOutLable: UILabel!
+    @IBOutlet weak var DueDate: UILabel!
+    @IBOutlet weak var TitleLabel: UILabel!
+    
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
+    
+    
     
 }
