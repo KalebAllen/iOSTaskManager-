@@ -17,6 +17,7 @@
 		0B5217E42188AB2600B6D249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5217E22188AB2600B6D249 /* LaunchScreen.storyboard */; };
 		0B5217F12188D60600B6D249 /* ViewTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5217F02188D60600B6D249 /* ViewTask.storyboard */; };
 		0B5217F72188E00C00B6D249 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5217F62188E00C00B6D249 /* AddTaskViewController.swift */; };
+		0B9D99E721909D59006A7398 /* DueDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9D99E621909D59006A7398 /* DueDate.swift */; };
 		BB11ACE9341B6396BB7A8FBA /* Pods_iOSTaskManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C4BAE6F0AF8EFB6058E899 /* Pods_iOSTaskManager.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		0B5217E52188AB2600B6D249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B5217F02188D60600B6D249 /* ViewTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewTask.storyboard; sourceTree = "<group>"; };
 		0B5217F62188E00C00B6D249 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		0B9D99E621909D59006A7398 /* DueDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDate.swift; sourceTree = "<group>"; };
 		7ADE639B912B8284285FF07D /* Pods-iOSTaskManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTaskManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTaskManager/Pods-iOSTaskManager.debug.xcconfig"; sourceTree = "<group>"; };
 		81C4BAE6F0AF8EFB6058E899 /* Pods_iOSTaskManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTaskManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,8 +86,9 @@
 			children = (
 				0B082766218B52F40090FA18 /* TaskManager.swift */,
 				0B5217D92188AB2500B6D249 /* AppDelegate.swift */,
-				0B5217E02188AB2600B6D249 /* Assets.xcassets */,
 				0B066C39218C945F007F7B4F /* DataModel.swift */,
+				0B9D99E621909D59006A7398 /* DueDate.swift */,
+				0B5217E02188AB2600B6D249 /* Assets.xcassets */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B5217DC2188AB2500B6D249 /* ViewController.swift in Sources */,
+				0B9D99E721909D59006A7398 /* DueDate.swift in Sources */,
 				0B5217F72188E00C00B6D249 /* AddTaskViewController.swift in Sources */,
 				0B082767218B52F40090FA18 /* TaskManager.swift in Sources */,
 				0B5217DA2188AB2500B6D249 /* AppDelegate.swift in Sources */,

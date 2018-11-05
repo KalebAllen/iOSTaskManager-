@@ -15,10 +15,9 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var DiscriptionTextFeild: UITextField!
     @IBOutlet weak var SubmitButtion: UIButton!
     
-    private init(){
-        Task = realm.objects(task.self)
-        super.init(coder: Int)
-    }
+//    private init(){
+//        Task = realm.objects(task.self)
+//    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
