@@ -19,9 +19,9 @@ class AddTaskViewController: UIViewController {
 //        Task = realm.objects(task.self)
 //    }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     //    var currentTask: Task!
     
