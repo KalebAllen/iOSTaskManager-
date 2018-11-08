@@ -120,7 +120,6 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="AddTaskButtonTapped:" destination="ezq-6f-mum" eventType="touchUpInside" id="Yn1-pL-Cij"/>
-                                    <action selector="SubmitButton:" destination="ezq-6f-mum" eventType="touchUpInside" id="OaN-aF-9ki"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKq-VT-ZHO">
