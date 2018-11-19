@@ -15,9 +15,6 @@ class ViewTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var TitleLabel: UILabel!
     
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
     
     
     

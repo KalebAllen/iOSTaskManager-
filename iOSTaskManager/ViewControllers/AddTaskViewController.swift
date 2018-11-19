@@ -15,13 +15,13 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var DiscriptionTextFeild: UITextField!
     @IBOutlet weak var SubmitButtion: UIButton!
     
-//    private init(){
-//        Task = realm.objects(task.self)
-//    }
+    //    private init(){
+    //        Task = realm.objects(task.self)
+    //    }
     
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    //    required init?(coder aDecoder: NSCoder) {
+    //        fatalError("init(coder:) has not been implemented")
+    //    }
     
     //    var currentTask: Task!
     
@@ -46,6 +46,7 @@ class AddTaskViewController: UIViewController {
             self.TitleTaskTextFeild.text = ""
             self.DiscriptionTextFeild.text = ""
         }
+        
         alertController.addAction(closeAction)
         self.present(alertController, animated: true, completion: nil)
     }
