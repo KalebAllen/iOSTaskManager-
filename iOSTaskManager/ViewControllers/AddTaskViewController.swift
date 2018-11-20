@@ -23,22 +23,23 @@ class AddTaskViewController: UIViewController {
     //        fatalError("init(coder:) has not been implemented")
     //    }
     
-    //    var currentTask: Task!
+//        var currentTask: Task!
     
     override func viewDidLoad() {
         
     }
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if let destination = segue.destination as?
-    //            AddTaskViewController {
-    //            destination.taskToView = currentTask
-    //        }
-    //    }
+//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            if let destination = segue.destination as?
+//                AddTaskViewController {
+//                destination.taskToView = currentTask
+//            }
+//        }
+    //function to add a task
     func addTask(task: Task) {
         self.TitleTaskTextFeild.text = ""
         self.DiscriptionTextFeild.text = ""
     }
-    
+    //error handling
     func showErrorAlert() {
         let alertController = UIAlertController(title: "ERROR", message: "Looks like you missed something", preferredStyle: .actionSheet)
         let closeAction = UIAlertAction(title: "Close", style: .default) {
@@ -46,7 +47,7 @@ class AddTaskViewController: UIViewController {
             self.TitleTaskTextFeild.text = ""
             self.DiscriptionTextFeild.text = ""
         }
-        
+        //alert action 
         alertController.addAction(closeAction)
         self.present(alertController, animated: true, completion: nil)
     }
