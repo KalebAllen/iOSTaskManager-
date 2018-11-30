@@ -19,6 +19,9 @@ class Task {
     }
     private init(){
         TaskArray = realm.objects(task.self)
+        let taskToAdd = task()
+        taskToAdd.title = "Title"
+        addTask(task: taskToAdd)
     }
     
     private var TaskArray: Results<task>!
@@ -28,9 +31,9 @@ class Task {
     func getTaskCount() -> Int {
         return TaskArray.count
     }
-    func addTask(task: Task) {
+    func addTask(task: task) {
         try! realm.write {
-            realm.add(TaskArray)
+            realm.add(task)
         }
     }
     func removeTask(at index: Int) {
