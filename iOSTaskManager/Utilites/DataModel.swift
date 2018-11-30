@@ -11,9 +11,16 @@ import RealmSwift
 import UserNotifications
 //Setting up Realm pod for use
 
-class task: Object {
-    @objc dynamic var title: String = ""
-    @objc dynamic var Taskdiscription = ""
-    @objc dynamic var dueDate: Date? = nil
-    @objc dynamic var checkIn: Bool = true
+class Task: NSObject {
+    var title: String
+    var taskDiscription: String
+    var dueDate: Date?
+    var checkIn: Bool
+    
+    init(title: String, taskDiscription: String, checkIn: Bool) {
+        self.title = title
+        self.taskDiscription = taskDiscription
+        self.checkIn = checkIn
+    }
+    
 }

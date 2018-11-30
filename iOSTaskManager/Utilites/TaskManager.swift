@@ -10,35 +10,35 @@ import Foundation
 import RealmSwift
 import UserNotifications
 
-class Task {
+class TaskManager {
     
-    static let sharedInstance = Task()
+    static let sharedInstance = TaskManager()
     
-    func getTask(at index: Int) -> task {
+    func getTask(at index: Int) -> Task {
         return TaskArray![index]
     }
     private init(){
-        TaskArray = realm.objects(task.self)
-        let taskToAdd = task()
+        TaskArray = realm.objects(Task.self)
+        let taskToAdd = Task(title: String, taskDiscription: String, checkIn: Bool)
         taskToAdd.title = "Title"
         addTask(task: taskToAdd)
     }
     
-    private var TaskArray: Results<task>!
+    var TaskArray: Results<Task>!
     
     let realm = try! Realm()
     
     func getTaskCount() -> Int {
         return TaskArray.count
     }
-    func addTask(task: task) {
+    func addTask(task: Task) {
         try! realm.write {
             realm.add(task)
         }
     }
     func removeTask(at index: Int) {
         try! realm.write {
-            realm.delete(getTask(at: index))
+            Task.delete(getTask(at: index))
         }
     }
     

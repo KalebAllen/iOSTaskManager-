@@ -13,14 +13,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //function that tells how many rows the table view will need
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Task.sharedInstance.getTaskCount()
+        return TaskManager.sharedInstance.getTaskCount()
     }
     //function that adds more reuseable cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SampleTask") as! ViewTaskTableViewCell
         
         //changes the labes to what the current task is and adds a duedate and a checked in/out lables
-        let currentTask = Task.sharedInstance.getTask(at: indexPath.row)
+        let currentTask = TaskManager.sharedInstance.getTask(at: indexPath.row)
         cell.TitleLabel.text = currentTask.title
         cell.DueDate.text = currentTask.title
         cell.InOutLable.text = currentTask.title

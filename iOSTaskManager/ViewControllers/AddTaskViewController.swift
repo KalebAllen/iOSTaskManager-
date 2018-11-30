@@ -15,30 +15,16 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var DiscriptionTextFeild: UITextField!
     @IBOutlet weak var SubmitButtion: UIButton!
     
-    //    private init(){
-    //        Task = realm.objects(task.self)
-    //    }
-    
-    //    required init?(coder aDecoder: NSCoder) {
-    //        fatalError("init(coder:) has not been implemented")
-    //    }
-    
-//        var currentTask: Task!
-    
     override func viewDidLoad() {
         
     }
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if let destination = segue.destination as?
-//                AddTaskViewController {
-//                destination.taskToView = currentTask
-//            }
-//        }
+    
     //function to add a task
     func addTask(task: Task) {
         self.TitleTaskTextFeild.text = ""
         self.DiscriptionTextFeild.text = ""
     }
+    
     //error handling
     func showErrorAlert() {
         let alertController = UIAlertController(title: "ERROR", message: "Looks like you missed something", preferredStyle: .actionSheet)
@@ -47,26 +33,26 @@ class AddTaskViewController: UIViewController {
             self.TitleTaskTextFeild.text = ""
             self.DiscriptionTextFeild.text = ""
         }
+        
         //alert action 
         alertController.addAction(closeAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    
-    private var Task: Results<task>!
+
+    private var Task: Results<Task>!
     
     let realm = try! Realm()
     
     func getTaskCount() -> Int {
         return Task.count
     }
-    func getTask(at index: Int) -> task {
+    func getTask(at index: Int) -> Task {
         return Task![index]
     }
     
     func removeTask(at index: Int) {
         try! realm.write {
-            realm.delete(getTask(at:index))
+            delete(getTask(at:index))
         }
     }
     // Do any additional setup after loading the view.
@@ -79,6 +65,26 @@ class AddTaskViewController: UIViewController {
      }
      */
     @IBAction func AddTaskButtonTapped(_ sender: Any) {
+        let task: Task = Task(title: "", description: "", completion: false)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-YYYY"
+        if TitleTaskTextFeild.text == "" {
+            print("You didnt type anything in the Title")
+            return
+        }
+        if DiscriptionTextFeild.text == "" {
+            print("You neeed to describe your task")
+            return
+        }
+        Task.name = TitleTaskTextFeild.text!
+        Task.taskDescription = description.text!
+        Task.completion = false
+        Task.createdDate = DateFormatter
+        
+        TaskManager.sharedInstance.addTask(task: task)
+        
+        performSegue(withIdentifier: "createToMain", sender: self)
+        
         guard let title = DiscriptionTextFeild.text, title.trimmingCharacters(in: .whitespaces) != "",
             let DiscriptionTextFeild = DiscriptionTextFeild.text,
             DiscriptionTextFeild.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
