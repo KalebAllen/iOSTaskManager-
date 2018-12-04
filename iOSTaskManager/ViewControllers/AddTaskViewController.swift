@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 import UserNotifications
 
 class AddTaskViewController: UIViewController {
@@ -38,10 +37,10 @@ class AddTaskViewController: UIViewController {
         alertController.addAction(closeAction)
         self.present(alertController, animated: true, completion: nil)
     }
-
+    
     private var Task: Results<Task>!
     
-    let realm = try! Realm()
+    let realm = try! Task()
     
     func getTaskCount() -> Int {
         return Task.count
@@ -77,7 +76,7 @@ class AddTaskViewController: UIViewController {
             return
         }
         Task.name = TitleTaskTextFeild.text!
-        Task.taskDescription = description.text!
+        Task.taskDescription = DiscriptionTextFeild.text!
         Task.completion = false
         Task.createdDate = DateFormatter
         

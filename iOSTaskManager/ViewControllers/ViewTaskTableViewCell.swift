@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 import UserNotifications
 class ViewTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var InOutLable: UILabel!

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import RealmSwift
 import UserNotifications
 //Setting up Realm pod for use
 

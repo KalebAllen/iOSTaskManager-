@@ -23,7 +23,6 @@ class TaskManager {
         taskToAdd.title = "Title"
         addTask(task: taskToAdd)
     }
-    
     var TaskArray: Results<Task>!
     
     let realm = try! Realm()
@@ -41,8 +40,7 @@ class TaskManager {
             Task.delete(getTask(at: index))
         }
     }
-    
-    
+    //function to tell weather or not if the task is complete or not 
     func checkInOut(at index: Int) {
         let taskForIndex = TaskArray[index]
         try! realm.write {
