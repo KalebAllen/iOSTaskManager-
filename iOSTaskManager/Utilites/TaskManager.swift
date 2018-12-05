@@ -15,43 +15,34 @@ class TaskManager {
     static let sharedInstance = TaskManager()
     
     func getTask(at index: Int) -> Task {
-        return TaskArray![index]
+        return TaskArray[index]
     }
+    
     private init(){
-        TaskArray = realm.objects(Task.self)
-        let taskToAdd = Task(title: String, taskDiscription: String, checkIn: Bool)
-        taskToAdd.title = "Title"
+        let taskToAdd = Task(title: "My Task", taskDiscription: "", checkIn: false)
         addTask(task: taskToAdd)
     }
-    var TaskArray: Results<Task>!
     
-    let realm = try! Realm()
+    var TaskArray: [Task] = []
     
     func getTaskCount() -> Int {
         return TaskArray.count
     }
     func addTask(task: Task) {
-        try! realm.write {
-            realm.add(task)
-        }
+        TaskArray.append(task)
     }
     func removeTask(at index: Int) {
-        try! realm.write {
-            Task.delete(getTask(at: index))
-        }
+        TaskArray.remove(at: index)
     }
     //function to tell weather or not if the task is complete or not 
     func checkInOut(at index: Int) {
         let taskForIndex = TaskArray[index]
-        try! realm.write {
-            let taskForIndex = TaskArray[index]
-            TaskArray[index].checkIn = !TaskArray[index].checkIn
-            
-            if taskForIndex.checkIn {
-                taskForIndex.dueDate = nil
-            } else {
-                taskForIndex.dueDate = Calendar.current.date(byAdding: .day, value: 24, to: Date())
-            }
+        TaskArray[index].checkIn = !TaskArray[index].checkIn
+        
+        if taskForIndex.checkIn {
+            taskForIndex.dueDate = nil
+        } else {
+            taskForIndex.dueDate = Calendar.current.date(byAdding: .day, value: 24, to: Date())
         }
         
         let center = UNUserNotificationCenter.current()

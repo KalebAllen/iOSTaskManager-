@@ -18,12 +18,6 @@ class AddTaskViewController: UIViewController {
         
     }
     
-    //function to add a task
-    func addTask(task: Task) {
-        self.TitleTaskTextFeild.text = ""
-        self.DiscriptionTextFeild.text = ""
-    }
-    
     //error handling
     func showErrorAlert() {
         let alertController = UIAlertController(title: "ERROR", message: "Looks like you missed something", preferredStyle: .actionSheet)
@@ -38,22 +32,6 @@ class AddTaskViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
-    private var Task: Results<Task>!
-    
-    let realm = try! Task()
-    
-    func getTaskCount() -> Int {
-        return Task.count
-    }
-    func getTask(at index: Int) -> Task {
-        return Task![index]
-    }
-    
-    func removeTask(at index: Int) {
-        try! realm.write {
-            delete(getTask(at:index))
-        }
-    }
     // Do any additional setup after loading the view.
     /*
      // MARK: - Navigation
@@ -64,31 +42,26 @@ class AddTaskViewController: UIViewController {
      }
      */
     @IBAction func AddTaskButtonTapped(_ sender: Any) {
-        let task: Task = Task(title: "", description: "", completion: false)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-YYYY"
-        if TitleTaskTextFeild.text == "" {
-            print("You didnt type anything in the Title")
-            return
-        }
-        if DiscriptionTextFeild.text == "" {
-            print("You neeed to describe your task")
-            return
-        }
-        Task.name = TitleTaskTextFeild.text!
-        Task.taskDescription = DiscriptionTextFeild.text!
-        Task.completion = false
-        Task.createdDate = DateFormatter
-        
-        TaskManager.sharedInstance.addTask(task: task)
-        
-        performSegue(withIdentifier: "createToMain", sender: self)
+        let task: Task = Task(title: "", taskDiscription: "", checkIn: false)
         
         guard let title = DiscriptionTextFeild.text, title.trimmingCharacters(in: .whitespaces) != "",
             let DiscriptionTextFeild = DiscriptionTextFeild.text,
             DiscriptionTextFeild.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+                print("error")
                 return
         }
+        
+        task.title = title
+        task.taskDiscription = DiscriptionTextFeild
+        task.checkIn = false
+        task.dueDate = Calendar.current.date(byAdding: .day, value: 14, to: Date())
+        
+        TaskManager.sharedInstance.addTask(task: task)
+        
+        print("task added")
+        
+        performSegue(withIdentifier: "createToMain", sender: self)
+        
     }
     
     
